@@ -1,19 +1,3 @@
-python
-# =============================================================================
-# TECH SHORTS FACTORY v5.2 (OPsblueprint) - Colab T4 / 12 GB RAM
-# -----------------------------------------------------------------------------
-# COLAB CELL 1 (run once; does NOT reinstall torch or touch Colab's NumPy/CUDA):
-#   !apt-get -qq update && apt-get -qq install -y espeak-ng ffmpeg fonts-dejavu-core
-#   !pip freeze | grep -iE '^(numpy|torch|torchvision|torchaudio)==' > /tmp/keep.txt
-#   !pip install -q -c /tmp/keep.txt "kokoro>=0.9.4" soundfile faster-whisper diffusers transformers accelerate peft safetensors huggingface_hub requests pillow
-#
-# COLAB SECRETS (key icon, enable notebook access):
-#   GEMINI_API_KEY, GROQ_API_KEY, GITHUB_TOKEN, PIXABAY_API_KEY,
-#   TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL      (at least one LLM key needed; PIXABAY optional)
-#
-# USAGE: run_pipeline() | selftest(CFG) | python file.py --selftest
-# LLM chain: Gemini -> Groq -> GitHub Models.  GPU order: Kokoro -> Whisper -> SDXL -> FFmpeg.
-# Topics: News+HN -> Google Trends RSS -> EVERGREEN.  Visuals: Pixabay + SDXL -> procedural grid.
 # =============================================================================
 import os, sys, re, json, gc, math, random, time, shutil, subprocess, difflib, wave, argparse
 import xml.etree.ElementTree as ET
